@@ -27,7 +27,7 @@ leapdev/
 │       └── services/             # Frontend API and auth helpers
 │           ├── api.ts            # Axios instance with token interceptor
 │           └── auth.ts           # Token storage & logout functionality
-│
+├── server/  
 ├── src/                          # Backend: Node.js + Express + TypeScript
 │   ├── authRoutes.ts             # Express routes for OAuth login & callback
 │   ├── index.ts                  # Backend entry point
@@ -41,12 +41,19 @@ leapdev/
 │       ├── github.ts             # Fetch GitHub repos & process with AI
 │       └── google.ts             # Fetch Google profile (emails limited in test env)
 │
-└── README.md                     # Project documentation (this file)
+└── summary.text                  # Project documentation (this file)
 
 /////////////////// yet to be implemented //////////////////////
 
-    frontend/
+    client/
 ___├── 1. apply proper routeing system for react app  
    └── 2. implement ai summarisation for github repos in the frontend 
+   └── 3. apply json response from AI to the frontend
+
+── server/              
+  ├── 1. apply caching system to the server to speed up the process         
+  ├── 2. find a way to access google emails in the test environment     
+  ├── 3. apply better routing system "graphql like" to the server   
+
 
 
