@@ -1,0 +1,52 @@
+# Project File Tree: leapdev
+
+leapdev/
+├── client/                      # Frontend: React + Vite application
+│   ├── public/                   # Public static assets
+│   │   └── vite.svg              # Default Vite logo
+│   │
+│   └── src/                      # React source code
+│       ├── App.css               # Global styling for App component
+│       ├── App.tsx               # Root React component
+│       ├── index.css             # Global styles
+│       ├── main.tsx              # React entry point that mounts App
+│       ├── vite-env.d.ts         # Vite TypeScript environment declarations
+│       │
+│       ├── assets/               # Local images and static assets
+│       │   └── react.svg         # React logo used in UI
+│       │
+│       ├── pages/                # Main page components
+│       │   ├── ai.tsx            # (Optional) AI summarization page
+│       │   ├── Callback.tsx      # Handles OAuth callback & token storage
+│       │   ├── Dashboard.tsx     # Main dashboard displaying fetched data
+│       │   ├── Login.tsx         # Login page for GitHub/Google OAuth
+│       │   │
+│       │   └── componants/       # Shared reusable UI components
+│       │       └── header.tsx    # Header with avatar, username, and logout
+│       │
+│       └── services/             # Frontend API and auth helpers
+│           ├── api.ts            # Axios instance with token interceptor
+│           └── auth.ts           # Token storage & logout functionality
+│
+├── src/                          # Backend: Node.js + Express + TypeScript
+│   ├── authRoutes.ts             # Express routes for OAuth login & callback
+│   ├── index.ts                  # Backend entry point
+│   ├── itemRoutes.ts             # Express route to fetch connected service items
+│   │
+│   ├── auth/                     # Authentication configurations
+│   │   └── root.ts               # OAuth providers and JWT secret setup
+│   │
+│   └── services/                 # Backend service integrations
+│       ├── ai.ts                 # OpenAI summarization and AI processing logic
+│       ├── github.ts             # Fetch GitHub repos & process with AI
+│       └── google.ts             # Fetch Google profile (emails limited in test env)
+│
+└── README.md                     # Project documentation (this file)
+
+/////////////////// yet to be implemented //////////////////////
+
+    frontend/
+___├── 1. apply proper routeing system for react app  
+   └── 2. implement ai summarisation for github repos in the frontend 
+
+
